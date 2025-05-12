@@ -1,0 +1,46 @@
+{
+  "name": "node-api",
+  "version": "1.0.0",
+  "description": "A Node.js API using Express and TypeScript",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "ts-node -r tsconfig-paths/register src/app.ts",
+    "build": "tsc",
+    "dev": "nodemon -r tsconfig-paths/register src/app.ts",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "migration:generate": "npm run typeorm migration:generate -- -d src/data/data-source.ts -n GenerateMigrationName",
+    "migration:run": "npm run typeorm migration:run -- -d src/data/data-source.ts",
+    "migration:revert": "npm run typeorm migration:revert -- -d src/data/data-source.ts"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1",
+    "reflect-metadata": "^0.2.2",
+    "sqlite": "^5.1.1",
+    "typeorm": "^0.3.22"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/knex": "^0.16.1",
+    "@types/node": "^22.15.2",
+    "knex": "^3.1.0",
+    "nodemon": "^3.1.10",
+    "sqlite3": "^5.1.7",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "author": "Arman Danesh",
+  "license": "ISC"
+}

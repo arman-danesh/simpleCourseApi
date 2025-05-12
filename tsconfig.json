@@ -1,0 +1,26 @@
+{  
+  "compilerOptions": {  
+    "target": "es6",  
+    "module": "commonjs",  
+    "outDir": "./dist",  
+    "rootDir": "./src",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,  
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,  
+    "skipLibCheck": true,  
+    "types": ["node", "express"],
+    "baseUrl": "./",
+    "paths": {
+      "@controllers*": ["src/controllers/*"],
+      "@models*": ["src/models/*"],
+      "@routes*": ["src/routes/*"],
+      "@data*": ["src/data/*"],
+      "@entity*": ["src/entity/*"],
+      "@utils*": ["src/utils/*"],
+      "@middleware*": ["src/middleware/*"]
+    }
+  },  
+  "include": ["src/**/*"]  
+}  
