@@ -1,6 +1,6 @@
 import {Request , Response} from "express";
-import { CourseModel , CourseModelInterface} from "@modelscourseModel";
-import {ApiError} from "@utilsApiError";
+import { CourseModel , CourseModelInterface} from "@models/courseModel";
+import {ApiError} from "@utils/ApiError";
 
 const newCourseModel = new CourseModel();
 export class CourseController{

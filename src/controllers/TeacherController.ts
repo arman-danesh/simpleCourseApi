@@ -1,6 +1,6 @@
 import {Request , Response} from "express";
-import {TeacherModel, TeacherInterface} from "@modelsteacherModel";
-import {ApiError} from "@utilsApiError";
+import {TeacherModel, TeacherInterface} from "@models/teacherModel";
+import {ApiError} from "@utils/ApiError";
 
 const newTeacherModel = new TeacherModel;
 

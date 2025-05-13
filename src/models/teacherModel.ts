@@ -1,4 +1,4 @@
-import {connectToDatabase} from "@datadatabase";
+import {connectToDatabase} from "@data/database";
 
 export interface TeacherInterface{
     rowid:number;

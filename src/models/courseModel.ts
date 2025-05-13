@@ -1,4 +1,4 @@
-    import { connectToDatabase } from "@datadatabase";
+    import { connectToDatabase } from "@data/database";
 
     export interface CourseModelInterface {
         rowid: number;
@@ -12,7 +12,6 @@
         private nameOfRegistrationsTable = "registrations";
         private nameOfCourseTable = "courses";
         private nameOfTeacherTable = "teachers";
-
 
         private async getDb() {
             return await connectToDatabase();

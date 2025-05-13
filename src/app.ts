@@ -1,12 +1,9 @@
 // src/app.ts
 import express from 'express';
-import studentRouter from "@routes/studentRouter";
-import CourseRouter from "@routes/courseRouter";
-import RegistrationRouter from "@routes/registrationRouter";
-import TeacherRouter from "@routes/teacherRouter";
 import dotenv from 'dotenv';
 import cors from 'cors';
-import { errorHandler } from "@middleware/errorHandler"; // adjust the path
+import { errorHandler } from "@middleware/errorHandler";
+import Routes from "@routes/Routers"; // adjust the path
 
 dotenv.config();
 
@@ -17,10 +14,7 @@ const PORT = process.env.PORT || 3000; // Fallback to 3000 if PORT is not specif
 app.use(cors());  // Enable CORS if needed
 app.use(express.json());  // Middleware to parse JSON requests
 
-app.use('/course', CourseRouter);
-app.use('/teacher', TeacherRouter);
-app.use('/student', studentRouter);
-app.use('/registration', RegistrationRouter);
+app.use('/api', Routes);
 
 app.use(errorHandler);
 

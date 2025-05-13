@@ -1,5 +1,5 @@
-import { connectToDatabase } from "@datadatabase";
-import {StudentInterface} from "@modelsstudentModel";
+import { connectToDatabase } from "@data/database";
+import {StudentInterface} from "@models/studentModel";
 export interface RegistrationModelInterface {
     error?: string;
     rowid: number;
